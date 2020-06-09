@@ -1,0 +1,28 @@
+/*
+// Sample code to perform I/O:
+
+cin >> name;                            // Reading input from STDIN
+cout << "Hi, " << name << ".\n";        // Writing output to STDOUT
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
+
+// Write your code here
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        n = n + 2 * (6 - (n-1) % 12) - 1;
+        cout<<n<<" ";
+        if(n%6 < 2) cout<<"WS";
+        else if(n%6 ==2 || n%6 == 5) cout<<"MS";
+        else cout<<"AS";
+        cout<<"\n";
+    }
+}
